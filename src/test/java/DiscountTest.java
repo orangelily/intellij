@@ -18,11 +18,20 @@ public class DiscountTest {
     //
     @Test
     public void discount_product_when_contains_discount_with_price_lower_100(){
-        Product product =new Product("Item001","basketball","个","球类","篮球",89.0);
+        Product product =new Product("Item001","basketball","个","球类","篮球",79.0);
         Double price = product.getPrice();
-
+        System.out.println("名称:"+product.getName()+" 数量:1,单价:"+product.getPrice()+",小计:"+product.getPrice());
     }
 
+    @Test
+    public void discount_product_when_contains_discount_with_price_higher_100(){
+        Product product =new Product("Item001","basketball","个","球类","篮球",189.0);
+        Double price = product.getPrice();
+        if (price.compareTo(100.0)>0){
+            product.setPrice(price-100);
+        }
+        System.out.println("名称:"+product.getName()+" 数量:1,单价:"+product.getPrice()+",小计:"+product.getPrice());
+    }
 
 
 
