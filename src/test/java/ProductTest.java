@@ -1,16 +1,15 @@
 /**
  * Created by orange on 16/7/3.
  */
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertTrue;
-
 public class ProductTest {
     //商店中商品信息
-    private Map<String,Product> mapInShop = new HashMap<>();
+    private Map<String,Product> mapInShop = new HashMap<String,Product>();
 
 
     @Test
@@ -47,7 +46,8 @@ public class ProductTest {
 
     @Test
     public void remove_one_product_with_info(){
-        Product product =new Product("Item001","basketball","个","球类","篮球",89.0);
+        double price =  (double)89.0;
+        Product product =new Product("Item001","basketball","个","球类","篮球",price);
         Product productInShop = mapInShop.get("Item001");
 
         if (productInShop!=null){

@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class DiscountTest {
 
-    private Map<String,String> mapInDiscount = new HashMap<>();
+    private Map<String,String> mapInDiscount = new HashMap<String,String>();
 
 
     //

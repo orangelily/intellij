@@ -11,8 +11,8 @@ import java.util.Map;
  * 购物车商品信息(条形码+数量)
  */
 public class CartTest {
-    private Map<String,Integer> mapInCart = new HashMap<>();
-    private Map<String,Double> map_priceInCart = new HashMap<>();
+    private Map<String,Integer> mapInCart = new HashMap<String,Integer>();
+    private Map<String,Double> map_priceInCart = new HashMap<String,Double>();
 //
     @Test
    public void add_product_into_cart_without_count(){
@@ -54,18 +54,6 @@ public class CartTest {
                  mapInCart.put("Item00001",--count);
             else mapInCart.remove("Item00001");
         }else {
-//            AssertFalse();
         }
     }
-
-
-//
-    @Test
-    public void product_price_in_cart(){
-
-//        map_priceInCart
-
-    }
-
-
 }

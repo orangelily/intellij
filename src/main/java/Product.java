@@ -69,4 +69,8 @@ public class Product {
         this.subCategory = subCategory;
         this.price = price;
     }
+
+//    public Product productGetByBarcode(String barcode){
+//
+//    }
 }
